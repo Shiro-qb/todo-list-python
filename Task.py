@@ -90,6 +90,3 @@ if __name__ == "__main__":
             print("Goodbye!")
             break
 
-root = tk.Tk()
-root.title("To Do List")
-root.mainloop()
