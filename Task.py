@@ -66,27 +66,29 @@ def delete_task():
 
 
 
-tasks = []
-while True:
-    print("\n1. Add task")
-    print("2. View tasks")
-    print("3. Complete task")
-    print("4. Delete task")
-    print("5. Quit")
-    choice = input("Pick an option: ")
-    if choice == "1":
-        new_task = create_task()
-        tasks.append(new_task)
-        print("Task added!")
-    elif choice == "2":
-        enumerate_tasks()
-    elif choice == "3":
-        complete_task()
-    elif choice == "4":
-        delete_task()
-    elif choice == "5":
-        print("Goodbye!")
-        break
+
+if __name__ == "__main__":
+    tasks = []
+    while True:
+        print("\n1. Add task")
+        print("2. View tasks")
+        print("3. Complete task")
+        print("4. Delete task")
+        print("5. Quit")
+        choice = input("Pick an option: ")
+        if choice == "1":
+            new_task = create_task()
+            tasks.append(new_task)
+            print("Task added!")
+        elif choice == "2":
+            enumerate_tasks()
+        elif choice == "3":
+            complete_task()
+        elif choice == "4":
+            delete_task()
+        elif choice == "5":
+            print("Goodbye!")
+            break
 
 root = tk.Tk()
 root.title("To Do List")
